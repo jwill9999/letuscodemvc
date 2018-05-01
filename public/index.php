@@ -1,5 +1,5 @@
 <?php
   require_once '../app/bootstrap.php';
 
-  // Init Core Library
+  // Boot Application
   $init = new Router;

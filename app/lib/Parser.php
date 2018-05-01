@@ -1,7 +1,14 @@
 <?php
+ /*
+   * Parser
+   * Loads the url and allocates controller/method/params
+   */
 
 class Parser
 {
+    protected $_controller = 'index';
+    protected $_method = 'index';
+    protected $_params = [];
 
     public static function getUrl()
     {

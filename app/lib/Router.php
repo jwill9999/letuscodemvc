@@ -1,26 +1,24 @@
 <?php
 /*
- * App Core Class
- * Creates URL & loads core controller
+ * App Router Class extended from Parser
+ * loads Router controller
  * URL FORMAT - /controller/method/_params
  */
 class Router extends Parser
 {
-    protected $_controller = 'index';
-    protected $_method = 'index';
-    protected $_params = [];
 
     public function __construct()
     {
-
+        // get the url
         $url = Parser::getUrl();
 
+        // set the current Controller
         $this->setController($url);
 
-        // Check for second part of url
+        // set the method if passed
         $this->setMethod($url);
 
-        // Get _params
+        // Get _params passed
         $this->setParams($url);
 
         // Call a callback with array of _params

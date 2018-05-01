@@ -11,11 +11,11 @@
 Object orientated php framework from scratch using the MVC design pattern. 
 
 
-## File access point
+## Root of application
 > Public/index.php
 
-## File Bootstrap
+## Application Bootstrap from
 > app/bootstrap.php 
 
-## configuration files
+## Configuration files
 > app/config/config
