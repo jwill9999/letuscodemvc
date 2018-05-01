@@ -6,7 +6,7 @@
     
     public function index(){
       $data = [
-        'title' => 'Pages Index Page',
+        'title' => 'http://letuscodemvc/pages',
       ];
      
       $this->view('pages/index', $data);
@@ -14,7 +14,7 @@
 
     public function about(){
       $data = [
-        'title' => 'Pages About Us Page'
+        'title' => 'http://letuscodemvc/pages/about'
       ];
 
       $this->view('pages/about', $data);

@@ -6,7 +6,7 @@
     
     public function index(){
       $data = [
-        'title' => 'Index Page',
+        'title' => 'http://letuscodemvc/',
       ];
      
       $this->view('index', $data);
