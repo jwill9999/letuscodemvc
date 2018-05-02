@@ -9,8 +9,11 @@ class Post
 
     public function getPosts()
     {
+        // pass query to PDO
         $this->db->query("SELECT * FROM Posts");
 
+        // using prepared statement fetch all data
+        // and return to controller
         return $this->db->fetchAll();
     }
 }
