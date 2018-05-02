@@ -10,7 +10,7 @@ class Parser
     protected $_method = 'index';
     protected $_params = [];
 
-    public static function getUrl()
+    protected static function getUrl()
     {
         if (isset($_GET['url'])) {
             $url = rtrim($_GET['url'], '/');
@@ -21,7 +21,7 @@ class Parser
 
     }
 
-    public function setController($url)
+    protected function setController($url)
     {
         if (file_exists('../app/controllers/' . ucwords($url[0]) . '.php')) {
             // If exists, set as controller
@@ -31,7 +31,7 @@ class Parser
         } 
     }
 
-    public function setMethod($url)
+    protected function setMethod($url)
     {
         if (isset($url[1])) {
             // Check to see if method exists in controller
@@ -51,7 +51,7 @@ class Parser
 
     }
 
-    public function setParams($url)
+    protected function setParams($url)
     {
         $this->_params = $url ? array_values($url) : [];
     }

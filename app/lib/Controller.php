@@ -7,14 +7,19 @@
     // Load model
     public function model($model){
       // Require model file
-      require_once '../app/models/' . $model . '.php';
+      if(file_exists('../app/models/' . $model . '.php'))
+      {
+        require_once '../app/models/' . $model . '.php';
+        // Instatiate model
+        return new $model();
+      } else {
+        die('Model does not exist');
+      }
 
-      // Instatiate model
-      return new $model();
     }
 
     // Load view
-    public function view($view, $data = []){
+    protected static function getView($view, $data = []){
       // Check for view file
       if(file_exists('../app/views/' . $view . '.php')){
         require_once '../app/views/' . $view . '.php';

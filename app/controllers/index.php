@@ -9,7 +9,7 @@
         'title' => 'http://letuscodemvc/',
       ];
      
-      $this->view('index', $data);
+      Controller::getView('index', $data);
     }
 
   }

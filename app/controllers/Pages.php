@@ -1,15 +1,18 @@
 <?php
   class Pages extends Controller {
     public function __construct(){
-     
+       // use model 
+       $this->posts = $this->model('post');
     }
     
     public function index(){
+      $posts = $this->posts->getPosts();
       $data = [
         'title' => 'http://letuscodemvc/pages',
+        'posts' => $posts,
       ];
      
-      $this->view('pages/index', $data);
+      Controller::getView('pages/index', $data);
     }
 
     public function about(){
@@ -17,6 +20,6 @@
         'title' => 'http://letuscodemvc/pages/about'
       ];
 
-      $this->view('pages/about', $data);
+      Controller::getView('pages/about', $data);
     }
   }

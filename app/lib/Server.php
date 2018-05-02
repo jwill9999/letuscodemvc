@@ -4,7 +4,7 @@
  * loads Router controller
  * URL FORMAT - /controller/method/_params
  */
-class Router extends Parser
+class Server extends Parser
 {
 
     public function __construct()
