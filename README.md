@@ -6,6 +6,11 @@
 > run in apache serve 
 ```
 
+## Project view
+
+![](./public/img/phpframework.png)
+
+
 ## Description
 
 Object orientated php framework from scratch using the MVC design pattern. 
