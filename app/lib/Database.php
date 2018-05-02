@@ -29,7 +29,7 @@ class Database
         // Create PDO instance
         try {
             $this->handler = new PDO($dbConnection, $this->user, $this->pass, $options);
-            echo 'DB connected';
+
         } catch (PDOException $e) {
             $this->error = $e->getMessage();
             echo $this->error;

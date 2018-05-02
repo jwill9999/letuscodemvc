@@ -12,7 +12,7 @@
       // pass Post model data to $data object
       // pass it in associate array as posts key
       $data = [
-        'title' => 'http://letuscodemvc/pages',
+        'title' => 'Welcome to Pages',
         'posts' => $posts,
       ];
      
@@ -21,7 +21,7 @@
 
     public function about(){
       $data = [
-        'title' => 'http://letuscodemvc/pages/about'
+        'title' => 'Welcome to Pages About'
       ];
 
       Controller::getView('pages/about', $data);

@@ -6,7 +6,7 @@
     
     public function index(){
       $data = [
-        'title' => 'http://letuscodemvc/',
+        'title' => 'Home Page',
       ];
      
       Controller::getView('index', $data);
