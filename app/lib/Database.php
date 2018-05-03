@@ -39,6 +39,7 @@ class Database
     // Prepare statement with query
     public function query($sql)
     {
+        // PDO instance prepare the sql query passed
         $this->statement = $this->handler->prepare($sql);
     }
 

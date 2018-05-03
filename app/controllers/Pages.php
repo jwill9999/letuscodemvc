@@ -7,7 +7,8 @@
     
     public function index(){
       // using model get POSTS
-      $posts = $this->posts->getPosts();
+      $posts = $this->posts->findAll();
+      
 
       // pass Post model data to $data object
       // pass it in associate array as posts key
@@ -20,8 +21,10 @@
     }
 
     public function about(){
+      $post = $this->posts->findOne('1');
       $data = [
-        'title' => 'Welcome to Pages About'
+        'title' => 'Welcome to Pages About',
+        'post' => $post
       ];
 
       Controller::getView('pages/about', $data);
