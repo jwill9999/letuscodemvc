@@ -12,13 +12,14 @@ class Parser
 
     protected static function getUrl()
     {
+        
         if (isset($_GET['url'])) {
             $url = rtrim($_GET['url'], '/');
             $url = filter_var($url, FILTER_SANITIZE_URL);
             $url = explode('/', $url);
+           
             return $url;
         }
-
     }
 
     protected function setController($url)
@@ -28,7 +29,7 @@ class Parser
             $this->_controller = ucwords($url[0]);
             // Unset 0 Index
             unset($url[0]);
-        } 
+        }
     }
 
     protected function setMethod($url)
@@ -39,8 +40,7 @@ class Parser
                 $this->_method = $url[1];
                 // Unset 1 index
                 unset($url[1]);
-            } 
-
+            }
         }
 
         // Require the controller
@@ -48,7 +48,6 @@ class Parser
 
         // Instantiate controller class
         $this->_controller = new $this->_controller;
-
     }
 
     protected function setParams($url)

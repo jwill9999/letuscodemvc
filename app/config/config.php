@@ -8,6 +8,6 @@
   // App Root
   define('APPROOT', dirname(dirname(__FILE__)));
   // URL Root
-  define('URLROOT', 'http://localhost/letuscodemvc/');
+  define('URLROOT', 'http://localhost/');
   // Site Name
   define('SITENAME', 'LetUsCode_MVC');

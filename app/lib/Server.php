@@ -1,4 +1,6 @@
 <?php
+
+
 /*
  * App Router Class extended from Parser
  * loads Router controller
@@ -10,6 +12,7 @@ class Server extends Parser
     public function __construct()
     {
         // get the url
+       
         $url = Parser::getUrl();
 
         // set the current Controller
@@ -24,5 +27,4 @@ class Server extends Parser
         // Call a callback with array of _params
         call_user_func_array([$this->_controller, $this->_method], $this->_params);
     }
-
 }

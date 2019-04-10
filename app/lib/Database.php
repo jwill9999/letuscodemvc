@@ -21,6 +21,7 @@ class Database
     {
         // Set dbConnection
         $dbConnection = 'mysql:host=' . $this->host . ';dbname=' . $this->dbname;
+       
         $options = array(
             PDO::ATTR_PERSISTENT => true,
             PDO::ATTR_ERRMODE => PDO::ERRMODE_EXCEPTION,
@@ -29,7 +30,6 @@ class Database
         // Create PDO instance
         try {
             $this->handler = new PDO($dbConnection, $this->user, $this->pass, $options);
-
         } catch (PDOException $e) {
             $this->error = $e->getMessage();
             echo $this->error;

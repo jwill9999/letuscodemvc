@@ -17,11 +17,11 @@
       </thead>
       <tbody>
       <tr>
-      <?php foreach ($data['posts'] as $post): ?>
+        <?php foreach ($data['posts'] as $post) : ?>
           <td><?php echo $post->id ?></td>
           <td><?php echo $post->title ?></td>
         </tr>
-      <?php endforeach?>
+        <?php endforeach?>
       </tbody>
     </table>
      </div>
